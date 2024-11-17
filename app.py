@@ -12,7 +12,6 @@ def upload_audio():
     audio_file = request.files["audio"]
     # Just a placeholder for any further processing of the audio file
     print(f"Received file: {audio_file.filename}")
-
-
+    return ""
 if __name__ == "__main__":
     app.run(debug=True)
