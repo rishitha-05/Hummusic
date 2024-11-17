@@ -3,23 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Audio Recorder</title>
+  <title>🎶 Create Your Melody</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>🎤 Record Your Voice</h1>
-    <p>Click the buttons below to record, stop, and listen to your audio.</p>
-    <div class="button-container">
-      <button id="recordBtn" class="button">Start Recording</button>
-      <button id="stopBtn" class="button" disabled>Stop Recording</button>
+    <h1>🎶 Create Your Melody</h1>
+    <p>Hum your melody and let the magic happen! We'll turn your voice into musical notes and help you explore instruments that suit your sound.</p>
+
+    <!-- Recording Indicator (will remain visible after recording) -->
+    <div class="recording-indicator" id="recordingIndicator">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
     </div>
+
+    <!-- Timer Display (red timer while recording) -->
+    <div class="timer" id="timerDisplay" style="color: red;">00:00</div>
+
+    <!-- Buttons for recording and stopping -->
+    <div class="button-container">
+      <button id="recordBtn" class="button">Start Humming</button>
+      <button id="stopBtn" class="button" disabled>Stop Humming</button>
+    </div>
+
+    <!-- Audio playback -->
     <div class="audio-container">
-      <h3>Recorded Audio</h3>
+      <h3 id="audioHeading" style="display: none;">Your Melody</h3>
       <audio id="audioPlayback" controls></audio>
     </div>
+
+    <!-- Response Message -->
     <div class="response" id="responseMessage"></div>
+
+    <!-- Final Timer Display after recording (00:00/00:00) -->
+    <div class="final-timer" id="finalTimerDisplay" style="display: none;">00:00/00:00</div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
