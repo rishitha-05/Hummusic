@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Recorder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎤 Record Your Voice</h1>
+    <p>Click the buttons below to record, stop, and listen to your audio.</p>
+    <div class="button-container">
+      <button id="recordBtn" class="button">Start Recording</button>
+      <button id="stopBtn" class="button" disabled>Stop Recording</button>
+    </div>
+    <div class="audio-container">
+      <h3>Recorded Audio</h3>
+      <audio id="audioPlayback" controls></audio>
+    </div>
+    <div class="response" id="responseMessage"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
